@@ -1,0 +1,12 @@
+li{
+    cursor: pointer;
+}
+li:hover{
+    color: orange;
+}
+.green{
+    color: yellowgreen;
+}
+.red{
+    color: red;
+}

@@ -1,0 +1,5 @@
+<h1>Hello {{name}}</h1>
+<ul>
+    <li *ngFor="let item of values" (click)="clickHandler(item)">{{ item }}</li>
+</ul>
+<div [ngClass]="{'green': flag, 'red': !flag}">{{ lettersAmount }}</div>

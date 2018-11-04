@@ -1,7 +1,12 @@
-<table>
-    <tr *ngFor="let item of products">
-        <td>{{ item.id }}</td>
-        <td>{{ item.name }}</td>
-        <td>{{ item.price }}</td>
-    </tr>
+<table class="table table-stripped">
+    <ng-container *ngFor="let item of products; let i = index">
+        <tr *ngIf="i < rowsAmount && item.show">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.price }}</td>
+            <td>
+                <button type="button" class="btn btn-danger" (click)="removeRow(item)">Delete {{ item.name }}</button>
+            </td>
+        </tr>
+    </ng-container>
 </table>
