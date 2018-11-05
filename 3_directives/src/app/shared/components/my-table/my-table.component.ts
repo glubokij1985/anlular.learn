@@ -7,6 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   inputs: ['rows']
 })
 export class MyTableComponent {
+  public value: string = 'Category 1';
   public products: { id: number, name: string, price: number, category: string, show: boolean }[] = [
     { id: 1, name: "product 1", price: 100, category: "Category 1", show: true },
     { id: 2, name: "product 2", price: 200, category: "Category 2", show: true },

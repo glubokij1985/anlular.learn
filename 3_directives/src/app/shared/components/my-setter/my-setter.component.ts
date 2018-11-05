@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   inputs: ['rows']
 })
 export class MySetterComponent {
-
+  public product: { id?: number, name?: string, price?: number, category?: string, show?: boolean } = {};
 }
