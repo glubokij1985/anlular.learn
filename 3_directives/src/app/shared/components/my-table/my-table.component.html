@@ -1,12 +1,12 @@
 <div>
     <select #mySelect [(ngModel)]="value">
-        <option value="Select category" [selected]="true">Select category</option>
+        <option value="Select category">Select category</option>
         <option value="Category 1">Category 1</option>
         <option value="Category 2">Category 2</option>
         <option value="Category 3">Category 3</option>
     </select>
 </div>
-<my-setter></my-setter>
+<my-setter (added)="onAdded($event)"></my-setter>
 <table class="table table-stripped">
     <ng-container *ngFor="let item of products; let i = index">
         <tr [ngClass]="{'row-red': item.price > 500}" *ngIf="i < rowsAmount && item.show && item.category === mySelect.value">

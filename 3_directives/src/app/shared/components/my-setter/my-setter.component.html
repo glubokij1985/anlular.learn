@@ -1,7 +1,7 @@
 <div>
     <label>
         Product ID
-        <input type="text" [(ngModel)]="product.id">
+        <input type="number" [(ngModel)]="product.id">
     </label>
 </div>
 <div>
@@ -13,20 +13,23 @@
 <div>
     <label>
         Product price
-        <input type="text" [(ngModel)]="product.price">
+        <input type="number" [(ngModel)]="product.price">
     </label>
 </div>
 <div>
-    <!-- use select here -->
     <label>
         Product category
-        <input type="text" [(ngModel)]="product.category">
+        <select [(ngModel)]="product.category">
+            <option value="Category 1">Category 1</option>
+            <option value="Category 2">Category 2</option>
+            <option value="Category 3">Category 3</option>
+        </select>
     </label>
 </div>
 <div>
-    <!-- use checkbox here -->
     <label>
         Product show
-        <input type="text" [(ngModel)]="product.show">
+        <input type="checkbox" [(ngModel)]="product.show">
     </label>
 </div>
+<button type="button" class="btn btn-primary" (click)="addProduct()">Add product</button>
