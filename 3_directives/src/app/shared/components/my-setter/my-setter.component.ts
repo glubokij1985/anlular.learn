@@ -10,7 +10,9 @@ export class MySetterComponent {
   public product: { id?: number, name?: string, price?: number, category?: string, show?: boolean } = {};
 
   addProduct(){
-    this.added.emit(this.product);
+    if(Object.keys(this.product).length !== 0){
+      this.added.emit(this.product);
+    }
   }
   @Output()
   added: EventEmitter<Object> = new EventEmitter();

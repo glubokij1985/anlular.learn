@@ -31,7 +31,14 @@ export class MyTableComponent {
   @Output()
   delete: EventEmitter<Object> = new EventEmitter();
   onAdded(event: any){
-    this.products.push(event);
+    let clone = {...event};
+    this.products.push(clone);
+    event.id = null;
+    event.name = null;
+    event.price = null;
+    event.category = null;
+    event.show = null;
+    console.log(this.products.length);
     console.log(this.products);
   }
 }
